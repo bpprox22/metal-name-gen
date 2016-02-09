@@ -5,7 +5,10 @@ something something, scalability
 
 
 To Run:
-#Build (make c# console app, build, etc.)
-#Extract metalnamegen.exe from src files
-#In CMD, run metalnamegen.exe with the word count argument
+
+Build (make c# console app, build, etc.)
+
+Extract metalnamegen.exe from src files
+
+In CMD, run metalnamegen.exe with the word count argument
   EX: C:\\> metalnamegen 3

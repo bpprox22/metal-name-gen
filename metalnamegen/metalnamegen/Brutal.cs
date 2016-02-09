@@ -17,7 +17,6 @@ namespace metalnamegen
                 System.Console.WriteLine("You must run this script with an argument");
                 System.Console.WriteLine("Enter a word count (1, 2, or 3)");
                 System.Console.WriteLine("EX: C:\\> metalnamegen 3");
-                Console.ReadKey();
                 return 1;
             }
 
@@ -27,7 +26,6 @@ namespace metalnamegen
             {
                 System.Console.WriteLine("What are you doing? I said 1, 2, or 3!");
                 Console.WriteLine("You broke it. It's crippled now -- good job.");
-                Console.ReadKey();
                 return 1;
             }
 

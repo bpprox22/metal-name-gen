@@ -1,0 +1,37 @@
+﻿@model MetalNameGenWebApp.ViewModels.IndexViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Metal Name Generator</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            <h1>Metal Name Generator</h1>
+            <p>
+                Sometimes we all need to know our metal name. Find out yours below.
+            </p>
+            @Html.DropDownListFor(m => m.SelectedNameCountOptionValue, Model.NameCountOptions)
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="Generate Metal Name" />
+
+            if (Model.MetalName != null && Model.MetalName.Length > 0)
+            {
+                <hr />
+                <p>
+                    <b>Generated Metal Name:</b> @Html.DisplayTextFor(m => m.MetalName)
+                </p>
+            }
+        }
+    </div>
+</body>
+</html>
+

@@ -10,27 +10,82 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Metal Name Generator</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+        .main-div {
+            width: 1200px;
+            margin: 0 auto 0 auto;
+        }
+        .header-div {
+            height: 270px;
+        }
+        .header-div img {
+            width: 1200px;
+            height: 270px;
+            border: none;
+        }
+        .body-div {
+            background-color: #eee;
+            padding: 10px;
+            min-height: 400px;
+        }
+        .body-div p {
+            margin-top: 0;            
+            font-family: Verdana;
+            font-size: 12pt;
+        }
+        .metalName-span {
+            font-family: 'Metal Mania', cursive;
+            display: block;
+            margin: 80px auto 20px auto;
+            width: 600px;
+            font-size: 48pt;
+            text-align: center;
+            color: #491414;
+        }
+        .footer-div {
+            border-top: solid 2px #000;
+            text-align: center;
+            padding: 20px 0 20px 0;
+            background-color: #ccc;
+            color: #000;
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <div>
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
-        {
-            @Html.AntiForgeryToken()
-            <h1>Metal Name Generator</h1>
-            <p>
-                Sometimes we all need to know our metal name. Find out yours below.
-            </p>
-            @Html.DropDownListFor(m => m.SelectedNameCountOptionValue, Model.NameCountOptions)
-            <input type="submit" name="btnSubmit" id="btnSubmit" value="Generate Metal Name" />
-
-            if (Model.MetalName != null && Model.MetalName.Length > 0)
+    <div class="main-div">
+        <div class="header-div">
+            <img src="~/Images/header.png" alt="Metal Name Generator" />
+        </div>
+        <div class="body-div">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post))
             {
-                <hr />
+                @Html.AntiForgeryToken()
                 <p>
-                    <b>Generated Metal Name:</b> @Html.DisplayTextFor(m => m.MetalName)
+                    Sometimes we all need to know our metal name. Find out yours below.
                 </p>
+                <label>
+                    How long of a name do you require?:
+                </label>
+                @Html.DropDownListFor(m => m.SelectedNameCountOptionValue, Model.NameCountOptions)
+                <input type="submit" name="btnSubmit" id="btnSubmit" value="Generate Metal Name" />
+
+                if (Model.MetalName != null && Model.MetalName.Length > 0)
+                {
+                    <hr />
+                    <p>
+                        <b>Generated Metal Name:</b>
+                        <span class="metalName-span">@Html.DisplayTextFor(m => m.MetalName)</span>
+                    </p>
+                }
             }
-        }
+        </div>
+        <div class="footer-div">
+            &copy; @DateTime.Now.Year Institute for the Protection of Family Values.
+        </div>
     </div>
 </body>
 </html>

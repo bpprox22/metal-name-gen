@@ -14,7 +14,7 @@ namespace MetalNameGenWebApp.ViewModels
             List<SelectListItem> nameCountOptions = new List<SelectListItem>();
 
             for(int i = 1; i <= 3; i++) {
-                nameCountOptions.Add(new SelectListItem() { Value = i.ToString(), Text =  i.ToString()});
+                nameCountOptions.Add(new SelectListItem() { Value = i.ToString(), Text =  String.Concat(i, " words")});
             }
 
             NameCountOptions = nameCountOptions;

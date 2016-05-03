@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "metalnamegen", "metalnamegen.csproj", "{9975BC18-D607-4C67-BFF3-60CA0293F81D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "metalnamegen", "metalnamegen\metalnamegen.csproj", "{9975BC18-D607-4C67-BFF3-60CA0293F81D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalNameGenWebApp", "..\MetalNameGenWebApp\MetalNameGenWebApp.csproj", "{E79848FF-C981-4958-AC99-3ECB4E987E34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetalNameGenWebApp", "MetalNameGenWebApp\MetalNameGenWebApp.csproj", "{E79848FF-C981-4958-AC99-3ECB4E987E34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
